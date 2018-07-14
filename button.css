@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(238,238,238);
+}
+.keduoButton{
+    box-sizing: border-box;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-color: white;
+}
+.keduoButton:hover{
+    background: #e5e5e5
+}
+.keduoButton:focus{
+    outline: none;
+    background: #e5e5e5;
+}
+.keduoButton > .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(192 192 192);
+    margin-left: -5px;
+    margin-top: -5px;
+    transition: transform 0.4s;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+.keduoButton > .circle.active{
+    transform: scale(10);
+    visibility: visible;
+}
